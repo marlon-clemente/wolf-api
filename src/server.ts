@@ -18,7 +18,7 @@ app.register(bcrypt, {
 })
 
 app.register(jwt, {
-  secret: 'aufhuefuiefaqw[op68d2asdad9d5s',
+  secret: 'aufhuefuiefaqwp68d2asdad9asdadd5s',
 })
 
 app.register(authRoutes)
