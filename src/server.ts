@@ -11,6 +11,7 @@ import path from 'path'
 
 const app = fastify()
 const envFilePath = process.env.NODE_ENV === 'production' ? '.env.prod' : '.env'
+
 configDotenv({
   path: path.resolve(__dirname, envFilePath),
 })
@@ -33,8 +34,9 @@ app.register(companies)
 
 app
   .listen({
-    port: 3333,
+    port:
+      process.env.NODE_ENV === 'production' ? Number(process.env.PORT) : 3333,
   })
   .then(() => {
-    console.log('running on http://localhost:3333')
+    console.log('running...')
   })
