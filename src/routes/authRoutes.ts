@@ -9,7 +9,7 @@ export async function authRoutes(server: FastifyInstance) {
       password: string().min(5, { message: 'password minimo 8' }),
     })
     const { username, password } = authenticateReq.parse(req.body)
-
+    console.log(await server.bcrypt.hash('admin'))
     const user = await prisma.user.findUnique({
       // @ts-ignore
       where: { username },
@@ -29,8 +29,6 @@ export async function authRoutes(server: FastifyInstance) {
       password,
       user.password,
     )
-
-    // console.log(await server.bcrypt.hash('admin'))
 
     if (!passwordValidate) {
       resp.status(400).send({
