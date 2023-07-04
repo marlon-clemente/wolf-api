@@ -10,7 +10,8 @@
     "dev": "tsx watch src/server.ts",
     "start": "node src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint src --ext .ts --fix"
+    "lint": "eslint src --ext .ts --fix",
+    "build": "tsup src"
   },
   "keywords": [],
   "author": "",
