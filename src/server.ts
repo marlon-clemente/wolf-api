@@ -25,8 +25,10 @@ app.register(bcrypt, {
 })
 
 app.register(jwt, {
-  secret: process.env.JWT_SECRET_KEY || '',
+  secret: process.env.JWT_SECRET_KEY || '123456789',
 })
+
+console.log('degund => process.env.JWT_SECRET_KEY', process.env.JWT_SECRET_KEY)
 
 app.register(authRoutes)
 app.register(statusRoutes)
