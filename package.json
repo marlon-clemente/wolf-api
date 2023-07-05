@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/server.js",
   "engines": {
-    "node": "16.x"
+    "node": "18.x"
   },
   "scripts": {
     "dev": "tsx watch src/server.ts",
@@ -33,6 +33,7 @@
     "fastify": "^4.17.0",
     "fastify-bcrypt": "^1.0.1",
     "pg": "^8.11.1",
+    "tsup": "^7.1.0",
     "zod": "^3.21.4"
   }
 }
