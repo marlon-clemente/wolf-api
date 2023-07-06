@@ -17,7 +17,8 @@ configDotenv({
 })
 
 app.register(cors, {
-  origin: ['http://localhost:3333'],
+  // origin: ['http://localhost:3333'],
+  origin: [],
 })
 
 app.register(bcrypt, {
