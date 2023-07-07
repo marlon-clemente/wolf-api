@@ -2,14 +2,11 @@
   "version": 2,
   "builds": [
     {
-      "src": "./dist/server.js",
-      "use": "@now/node-server"
+      "src": "dist/server.js",
+      "use": "@now/node"
     }
   ],
   "routes": [
-    {
-      "handle": "filesystem"
-    },
     {
       "src": "/(.*)",
       "dest": "dist/server.js"
