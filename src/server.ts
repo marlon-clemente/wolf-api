@@ -26,7 +26,7 @@ app.register(bcrypt, {
 })
 
 app.register(jwt, {
-  secret: process.env.JWT_SECRET_KEY || '123s456789',
+  secret: process.env.JWT_SECRET_KEY || '123s4567885699',
 })
 
 console.log('degund => process.env.JWT_SECRET_KEY', process.env.JWT_SECRET_KEY)
