@@ -11,5 +11,18 @@
       "src": "/(.*)",
       "dest": "dist/server.js"
     }
-  ]
+  ],
+  "env": {
+    "PRISMA_GENERATE_SCRIPT": "prisma generate"
+  },
+  "functions": {
+    "postBuild": {
+      "runtime": "@vercel/node",
+      "memory": 1024,
+      "maxDuration": 30,
+      "includeFiles": [
+        "prisma/migrations/**"
+      ]
+    }
+  }
 }
