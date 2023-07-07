@@ -11,5 +11,14 @@
       "src": "/(.*)",
       "dest": "dist/server.js"
     }
-  ]
+  ],
+  "build": {
+    "env": {
+      "PRISMA_FORCE_NAPI": "true"
+    },
+    "hooks": {
+      "prebuild": "npx prisma generate",
+      "postbuild": "npx prisma migrate deploy"
+    }
+  }
 }
