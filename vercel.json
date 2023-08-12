@@ -1,8 +1,9 @@
 {
-  "rewrites": [
-      {
-          "source": "/(.*)",
-          "destination": "/api/index.js"
-      }
-  ]
+    "outputDirectory": "build",
+    "rewrites": [
+        {
+            "source": "/(.*)",
+            "destination": "/api/serverless.ts"
+        }
+    ]
 }

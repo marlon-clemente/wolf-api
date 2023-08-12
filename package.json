@@ -26,6 +26,7 @@
     "@fastify/env": "^4.2.0",
     "@fastify/jwt": "^6.7.1",
     "@prisma/client": "^4.16.2",
+    "@vercel/node": "^2.15.8",
     "dotenv": "^16.3.1",
     "fastify": "^4.17.0",
     "fastify-bcrypt": "^1.0.1",
