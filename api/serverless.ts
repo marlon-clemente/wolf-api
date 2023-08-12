@@ -3,11 +3,11 @@ import jwt from "@fastify/jwt";
 import fastify from "fastify";
 import bcrypt from "fastify-bcrypt";
 
-import { authRoutes } from " ../src/app/routes/authRoutes";
 import { configDotenv } from "dotenv";
 import path from "path";
-import { companies } from "../src/app/routes/company";
-import { statusRoutes } from "../src/app/routes/statusRoutes";
+import { authRoutes } from "../src/routes/authRoutes";
+import { companies } from "../src/routes/company";
+import { statusRoutes } from "../src/routes/statusRoutes";
 
 const app = fastify({ logger: true });
 const envFilePath =
@@ -34,7 +34,7 @@ app.register(authRoutes);
 app.register(statusRoutes);
 app.register(companies);
 
-export default async (req, res) => {
+export default async (req: any, res: any) => {
   await app.ready();
   app.server.emit("request", req, res);
 };
