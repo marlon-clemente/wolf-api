@@ -10,7 +10,7 @@ import { companies } from "./routes/company";
 import { statusRoutes } from "./routes/statusRoutes";
 
 export const init = () => {
-  const app = fastify();
+  const app = fastify({ logger: true });
   const envFilePath =
     process.env.NODE_ENV === "production" ? ".env.prod" : ".env";
 
