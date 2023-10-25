@@ -10,7 +10,8 @@
     "dev": "tsx watch src/server.ts",
     "start": "node src/server.js",
     "build": "rimraf dist && tsc && prisma generate && tsup src",
-    "ts.check": "tsc --project tsconfig.json"
+    "ts.check": "tsc --project tsconfig.json",
+    "add-build": "git add dist"
   },
   "pre-commit": [
     "ts.check",
