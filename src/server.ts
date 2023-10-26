@@ -41,7 +41,7 @@ export const init = () => {
 if (require.main === module) {
   init()
     .listen({
-      port: 3333,
+      port: process.env.PORT ? Number(process.env.PORT) : 3000
     })
     .then(() => {
       console.log("running...");
