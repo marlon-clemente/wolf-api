@@ -38,10 +38,13 @@ export const init = () => {
   return app;
 };
 
+const port = Number(process.env.PORT) || 3000
+
 if (require.main === module) {
   init()
     .listen({
-      port: process.env.PORT ? Number(process.env.PORT) : 3000
+      port,
+      host: '0.0.0.0'
     })
     .then(() => {
       console.log("running...");
