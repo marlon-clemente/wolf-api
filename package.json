@@ -12,13 +12,15 @@
     "build": "rm -rf ./dist/server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Marlon Clemente",
   "license": "ISC",
   "devDependencies": {
     "@rocketseat/eslint-config": "^1.2.0",
     "@types/node": "^20.1.7",
     "eslint": "^8.40.0",
     "tsx": "^3.12.7",
+    "prisma": "^4.16.2",
+    "dotenv": "^16.3.1",
     "typescript": "^5.0.4"
   },
   "dependencies": {
@@ -26,11 +28,9 @@
     "@fastify/env": "^4.2.0",
     "@fastify/jwt": "^6.7.1",
     "@prisma/client": "^4.16.2",
-    "dotenv": "^16.3.1",
     "fastify": "^4.17.0",
     "fastify-bcrypt": "^1.0.1",
     "pg": "^8.11.1",
-    "prisma": "^4.16.2",
     "tsup": "^7.1.0",
     "zod": "^3.21.4"
   }
